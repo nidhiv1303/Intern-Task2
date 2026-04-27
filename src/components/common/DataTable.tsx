@@ -7,7 +7,8 @@ import { MoreHorizontal } from "lucide-react";
 interface Column<T> {
   key: keyof T | string;
   header: string;
-  render?: (value: unknown, item: T) => React.ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  render?: (value: any, item: T) => React.ReactNode;
 }
 
 interface DataTableProps<T> {
@@ -15,14 +16,15 @@ interface DataTableProps<T> {
   data: T[];
 }
 
-export default function DataTable<T extends Record<string, unknown>>({ columns, data }: DataTableProps<T>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function DataTable<T extends Record<string, any>>({ columns, data }: DataTableProps<T>) {
   return (
     <div className={`${styles.tableWrapper} glass`}>
       <table className={styles.table}>
         <thead>
           <tr>
             {columns.map((col) => (
-              <th key={col.key}>{col.header}</th>
+              <th key={col.key as string}>{col.header}</th>
             ))}
             <th>Actions</th>
           </tr>
@@ -31,7 +33,7 @@ export default function DataTable<T extends Record<string, unknown>>({ columns, 
           {data.map((item, idx) => (
             <tr key={idx} className={styles.row}>
               {columns.map((col) => (
-                <td key={col.key}>
+                <td key={col.key as string}>
                   {col.render ? col.render(item[col.key], item) : item[col.key]}
                 </td>
               ))}

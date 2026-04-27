@@ -5,10 +5,6 @@ import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   Users,
-  Settings,
-  BarChart3,
-  Calendar,
-  Mail,
   LogOut,
 } from "lucide-react";
 import styles from "./Sidebar.module.css";

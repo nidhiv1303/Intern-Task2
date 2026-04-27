@@ -1,18 +1,16 @@
 "use client";
 
 import React from "react";
-import { TrendingUp, TrendingDown, LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import styles from "./StatCard.module.css";
 
 interface StatCardProps {
   title: string;
   value: string;
-  change: string;
-  isUp: boolean;
   icon: LucideIcon;
 }
 
-export default function StatCard({ title, value, change, isUp, icon: Icon }: StatCardProps) {
+export default function StatCard({ title, value, icon: Icon }: StatCardProps) {
   return (
     <div className={`${styles.card} glass-card`}>
       <div className={styles.header}>

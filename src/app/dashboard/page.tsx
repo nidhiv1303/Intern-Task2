@@ -22,29 +22,21 @@ export default function DashboardPage() {
           <StatCard
             title="Total Users"
             value="12,482"
-            change="+12.5%"
-            isUp={true}
             icon={Users}
           />
           <StatCard
             title="Total Revenue"
             value="$45,231"
-            change="+8.2%"
-            isUp={true}
             icon={DollarSign}
           />
           <StatCard
             title="Active Orders"
             value="892"
-            change="-2.4%"
-            isUp={false}
             icon={ShoppingCart}
           />
           <StatCard
             title="Engagement Rate"
             value="64.2%"
-            change="+4.1%"
-            isUp={true}
             icon={Activity}
           />
         </div>
