@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.content {
+  margin-top: var(--header-height);
+  padding: 2rem;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
+}
