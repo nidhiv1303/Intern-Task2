@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Antigravity | Admin Dashboard",
+  title: "Admin Dashboard",
   description: "A premium admin dashboard built with Next.js and TypeScript.",
 };
 
