@@ -26,7 +26,7 @@ const columns = [
 
 const dummyUsers = [
   { name: "Nidhi Chaudhary", email: "nidhi123@gmail.com", role: "Admin", status: "Active", lastActive: "2 mins ago" },
-  { name: "Sarah Smith", email: "sarah.s@company.com", role: "Editor", status: "Active", lastActive: "1 hour ago" },
+  { name: "Sujal Shah", email: "sujal@company.com", role: "Editor", status: "Active", lastActive: "1 hour ago" },
   { name: "Robert Johnson", email: "rob.j@gmail.com", role: "Viewer", status: "Inactive", lastActive: "3 days ago" },
   { name: "Emily Davis", email: "emily.d@outlook.com", role: "Editor", status: "Pending", lastActive: "Never" },
   { name: "Michael Wilson", email: "m.wilson@tech.io", role: "Admin", status: "Active", lastActive: "5 mins ago" },

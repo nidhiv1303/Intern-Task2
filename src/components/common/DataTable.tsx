@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./DataTable.module.css";
-import { MoreHorizontal } from "lucide-react";
+import { MoreHorizontal, Pencil, Trash2 } from "lucide-react";
 
 interface Column<T> {
   key: keyof T | string;
@@ -38,9 +38,16 @@ export default function DataTable<T extends Record<string, any>>({ columns, data
                 </td>
               ))}
               <td>
-                <button className={styles.actionBtn}>
-                  <MoreHorizontal size={18} />
-                </button>
+                <div className={styles.actionsContainer}>
+                  <button className={styles.nini2}>
+                    <Pencil size={14} />
+                    Edit
+                  </button>
+                  <button className={styles.nini1}>
+                    <Trash2 size={14} />
+                    Delete
+                  </button>
+                </div>
               </td>
             </tr>
           ))}
